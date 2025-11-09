@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muro de Comentarios en Tiempo Real</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💬 Muro de Comentarios</h1>
+            <div id="auth-section">
+                <button id="login-btn" class="btn btn-google">🚪 Ingresar con Google</button>
+                <div id="user-info" class="hidden">
+                    <img id="user-avatar" src="" alt="Avatar">
+                    <span id="user-name"></span>
+                    <button id="logout-btn" class="btn btn-logout">👋 Salir</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id="comment-form" class="hidden">
+                <h3>Deja tu comentario:</h3>
+                <form id="new-comment-form">
+                    <textarea 
+                        id="comment-text" 
+                        placeholder="Escribe algo interesante..." 
+                        required
+                    ></textarea>
+                    <button type="submit" class="btn btn-primary">📤 Publicar</button>
+                </form>
+            </div>
+
+            <div id="comments-container">
+                <h3>Comentarios Recientes DGSGF:</h3>
+                <div id="comments-list"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script type="module" src="app-cdn.js"></script>
+</body>
+</html>
