@@ -27,14 +27,19 @@
                     <textarea 
                         id="comment-text" 
                         placeholder="Escribe algo interesante..." 
-                        required
                     ></textarea>
-                    <button type="submit" class="btn btn-primary">📤 Publicar</button>
+                    
+                    <div class="file-input-wrapper">
+                        <label for="comment-image" class="file-label">📷 Agregar foto (opcional)</label>
+                        <input type="file" id="comment-image" accept="image/png, image/jpeg, image/gif">
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="btn btn-primary">📤 Publicar</button>
                 </form>
             </div>
 
             <div id="comments-container">
-                <h3>Comentarios Recientes DGSGF:</h3>
+                <h3>Comentarios Recientes:</h3>
                 <div id="comments-list"></div>
             </div>
         </main>
